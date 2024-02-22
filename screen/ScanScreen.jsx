@@ -66,7 +66,10 @@ const ScanScreen = () => {
             animationType="slide"
             transparent = {true}
             >
-            <View style={styles.CenteredView}>
+            <View 
+              style={styles.CenteredView} 
+              onTouchEnd = {() => hideModal()}
+              >
                 <View style={styles.modalView}>
                   <Text style={styles.modalText}>{productDetail}</Text>
                   <Pressable

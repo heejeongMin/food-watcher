@@ -2,7 +2,7 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from '../screen/HomeScreen';
-import ProfileScreen from '../screen/ProfileScreen';
+import FoodScreen from '../screen/FoodScreen';
 import { useAuth } from './AuthProvider';
 import ScanScreen from '../screen/ScanScreen';
 
@@ -19,8 +19,8 @@ const AppNavigator = () => {
 
           if (route.name === 'Home') {
             iconName = focused ? 'home' : 'home-outline';
-          } else if (route.name === 'Profile') {
-            iconName = focused ? 'person' : 'person-outline';
+          } else if (route.name === 'Food') {
+            iconName = focused ? 'restaurant' : 'restaurant-outline';
           } else if (route.name == 'Scan') {
             iconName = focused ? 'barcode' : 'barcode-outline';
           }
@@ -45,9 +45,9 @@ const AppNavigator = () => {
         }
         {isLoggedIn && ([
             <Tab.Screen
-            key = "Profile"
-            name="Profile"
-            component={ProfileScreen}
+            key = "Food"
+            name="Food"
+            component={FoodScreen}
             />, 
             <Tab.Screen
             key = "Scan"

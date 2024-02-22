@@ -1,5 +1,3 @@
-import CommonModal from "../components/CommonModal";
-
 
 const foodOpenApiBaseURL = 'http://openapi.foodsafetykorea.go.kr/api/2ae0203501ef4af5a8b7/C005/json/1/1/BAR_CD=';
 
